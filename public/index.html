@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FFmpeg Builder</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h1 class="title">FFMPEG BUILDER</h1>
+			</header>
+
+			<main class="main-content">
+				<!-- SRT to HLS Conversion Section -->
+				<section class="conversion-section">
+					<h2 class="section-title">SRT to HLS Conversion</h2>
+					<form id="srt-form" class="conversion-form">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="srt-address">SRT Address</label>
+								<input
+									type="text"
+									id="srt-address"
+									name="srtAddress"
+									placeholder="e.g., 192.168.1.100"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="srt-port">SRT Port</label>
+								<input
+									type="number"
+									id="srt-port"
+									name="srtPort"
+									placeholder="e.g., 8888"
+									min="1"
+									max="65535"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="stream-id">Stream ID</label>
+								<input
+									type="text"
+									id="stream-id"
+									name="streamId"
+									placeholder="Optional"
+								/>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="passphrase">Passphrase</label>
+								<input
+									type="password"
+									id="passphrase"
+									name="passphrase"
+									placeholder="Optional"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="output-path-srt">Output Path</label>
+								<input
+									type="text"
+									id="output-path-srt"
+									name="outputPath"
+									placeholder="e.g., streams/live"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="hls-name">HLS Name</label>
+								<input
+									type="text"
+									id="hls-name"
+									name="hlsName"
+									placeholder="e.g., stream"
+									required
+								/>
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">
+								Build
+							</button>
+							<button
+								type="button"
+								class="btn btn-secondary"
+								id="preview-srt"
+							>
+								Preview Command
+							</button>
+						</div>
+					</form>
+				</section>
+
+				<!-- HLS to MP4 Conversion Section -->
+				<section class="conversion-section">
+					<h2 class="section-title">HLS to MP4 Conversion</h2>
+					<form id="hls-form" class="conversion-form">
+						<div class="form-row">
+							<div class="form-group full-width">
+								<label for="hls-url">HTTP/HTTPS HLS Link</label>
+								<input
+									type="url"
+									id="hls-url"
+									name="hlsInputUrl"
+									placeholder="e.g., https://example.com/stream.m3u8"
+									required
+								/>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="output-path-mp4">Output Path</label>
+								<input
+									type="text"
+									id="output-path-mp4"
+									name="outputPath"
+									placeholder="e.g., recordings"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="mp4-name">MP4 Name</label>
+								<input
+									type="text"
+									id="mp4-name"
+									name="mp4Name"
+									placeholder="e.g., recording"
+									required
+								/>
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">
+								Build
+							</button>
+							<button
+								type="button"
+								class="btn btn-secondary"
+								id="preview-hls"
+							>
+								Preview Command
+							</button>
+						</div>
+					</form>
+				</section>
+			</main>
+
+			<!-- Progress and Status Section -->
+			<section class="status-section">
+				<h3>Active Processes</h3>
+				<div id="processes-container">
+					<p class="no-processes">No active processes</p>
+				</div>
+			</section>
+
+			<!-- Log Section -->
+			<section class="log-section">
+				<h3>Conversion Log</h3>
+				<div class="log-controls">
+					<button class="btn btn-secondary" id="clear-log">
+						Clear Log
+					</button>
+					<button class="btn btn-secondary" id="toggle-log">
+						Toggle Log
+					</button>
+				</div>
+				<div id="log-container" class="log-container">
+					<div id="log-output" class="log-output"></div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Modal for Command Preview -->
+		<div id="command-modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Command Preview</h3>
+					<button class="modal-close" id="close-modal">
+						&times;
+					</button>
+				</div>
+				<div class="modal-body">
+					<pre id="command-preview"></pre>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" id="copy-command">
+						Copy Command
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Notification Container -->
+		<div id="notification-container"></div>
+
+		<script src="app.js"></script>
+	</body>
+</html>

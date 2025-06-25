@@ -1,0 +1,24 @@
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion error","processId":"7afbd9c0-e13e-4fd5-b74f-fa92c8b9a9eb","service":"ffmpeg-builder","timestamp":"2025-06-25T17:26:26.502Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion failed","processId":"7afbd9c0-e13e-4fd5-b74f-fa92c8b9a9eb","service":"ffmpeg-builder","timestamp":"2025-06-25T17:26:26.503Z"}
+{"code":-2,"level":"error","message":"SRT to HLS conversion failed","processId":"7afbd9c0-e13e-4fd5-b74f-fa92c8b9a9eb","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T17:26:26.504Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion error","processId":"f29a0e50-5f21-438e-ba77-63883045982b","service":"ffmpeg-builder","timestamp":"2025-06-25T17:30:02.627Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion failed","processId":"f29a0e50-5f21-438e-ba77-63883045982b","service":"ffmpeg-builder","timestamp":"2025-06-25T17:30:02.627Z"}
+{"code":-2,"level":"error","message":"SRT to HLS conversion failed","processId":"f29a0e50-5f21-438e-ba77-63883045982b","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T17:30:02.628Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion error","processId":"b4f7f64a-7982-49a0-b19a-cde58489ff4a","service":"ffmpeg-builder","timestamp":"2025-06-25T17:31:09.369Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion failed","processId":"b4f7f64a-7982-49a0-b19a-cde58489ff4a","service":"ffmpeg-builder","timestamp":"2025-06-25T17:31:09.370Z"}
+{"code":-2,"level":"error","message":"SRT to HLS conversion failed","processId":"b4f7f64a-7982-49a0-b19a-cde58489ff4a","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T17:31:09.372Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion error","processId":"379fafaf-12bf-4fdc-8435-ab2770ecbe8d","service":"ffmpeg-builder","timestamp":"2025-06-25T18:09:39.522Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"SRT to HLS conversion failed","processId":"379fafaf-12bf-4fdc-8435-ab2770ecbe8d","service":"ffmpeg-builder","timestamp":"2025-06-25T18:09:39.523Z"}
+{"code":-2,"level":"error","message":"SRT to HLS conversion failed","processId":"379fafaf-12bf-4fdc-8435-ab2770ecbe8d","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T18:09:39.523Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion error","processId":"bda6e2cb-5400-4872-8397-e0282f1195e6","service":"ffmpeg-builder","timestamp":"2025-06-25T18:11:52.758Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion failed","processId":"bda6e2cb-5400-4872-8397-e0282f1195e6","service":"ffmpeg-builder","timestamp":"2025-06-25T18:11:52.758Z"}
+{"code":-2,"level":"error","message":"HLS to MP4 conversion failed","processId":"bda6e2cb-5400-4872-8397-e0282f1195e6","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T18:11:52.759Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion error","processId":"4563d18b-5af9-4caa-b2d1-c3c1a61e97b8","service":"ffmpeg-builder","timestamp":"2025-06-25T18:14:19.349Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion failed","processId":"4563d18b-5af9-4caa-b2d1-c3c1a61e97b8","service":"ffmpeg-builder","timestamp":"2025-06-25T18:14:19.349Z"}
+{"code":-2,"level":"error","message":"HLS to MP4 conversion failed","processId":"4563d18b-5af9-4caa-b2d1-c3c1a61e97b8","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T18:14:19.351Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion error","processId":"b9dd9c46-afeb-4d1b-9903-a4a17da0255a","service":"ffmpeg-builder","timestamp":"2025-06-25T18:15:11.697Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion failed","processId":"b9dd9c46-afeb-4d1b-9903-a4a17da0255a","service":"ffmpeg-builder","timestamp":"2025-06-25T18:15:11.698Z"}
+{"code":-2,"level":"error","message":"HLS to MP4 conversion failed","processId":"b9dd9c46-afeb-4d1b-9903-a4a17da0255a","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T18:15:11.698Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion error","processId":"7bdb88f4-27f3-4d29-9716-ea8f65f8f280","service":"ffmpeg-builder","timestamp":"2025-06-25T18:15:23.607Z"}
+{"error":"spawn ffmpeg ENOENT","level":"error","message":"HLS to MP4 conversion failed","processId":"7bdb88f4-27f3-4d29-9716-ea8f65f8f280","service":"ffmpeg-builder","timestamp":"2025-06-25T18:15:23.608Z"}
+{"code":-2,"level":"error","message":"HLS to MP4 conversion failed","processId":"7bdb88f4-27f3-4d29-9716-ea8f65f8f280","service":"ffmpeg-builder","stderr":"","timestamp":"2025-06-25T18:15:23.608Z"}

@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+    ffmpeg-builder:
+        build: .
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+            - PORT=3000
+            - OUTPUT_PATH=/var/ffmpeg-output
+            - LOG_FILE_PATH=/var/log/ffmpeg-builder
+        volumes:
+            - ./output:/var/ffmpeg-output
+            - ./logs:/var/log/ffmpeg-builder
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 60s
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+
+    nginx:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf:ro
+            - ./ssl:/etc/nginx/ssl:ro
+        depends_on:
+            - ffmpeg-builder
+        restart: unless-stopped
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+
+volumes:
+    ffmpeg_output:
+        driver: local
+    ffmpeg_logs:
+        driver: local
+
+networks:
+    default:
+        name: ffmpeg-builder
+        driver: bridge
